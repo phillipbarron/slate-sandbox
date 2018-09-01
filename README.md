@@ -1,4 +1,4 @@
-### sandboxing plugin behaviour for keydown in slateJs
+### Sandboxing plugin behaviour for keydown in slateJs
 
 the is a create-react-app sandbox for testing slate-js plugins
 
