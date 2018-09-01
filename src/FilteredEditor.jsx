@@ -37,6 +37,7 @@ class FilteredEditor extends Component {
         value: initialValue
     }
     onChange = ({value}) => {
+        console.log(' the new state is ', value.toJS());
         this.setState({value})
     }
     render() {

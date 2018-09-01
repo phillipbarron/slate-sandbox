@@ -1,22 +1,13 @@
 /** 
- * remove all the data
+ * filter out parent data
 */
 export function SimpleFilter() {
     return {
         onKeyDown(event, change) {
-            if (event.key === "Enter") {
-                const blocks = change.value.blocks;
-                if (blocks) {
-                    blocks.forEach(block => {
-                        const existingData = block.get("data");
-                        if (existingData) {
-                            const updatedBlock = block.set('data', {});
-                            change.setBlocks(updatedBlock);
-                        }
-                    });
-                }
-                console.log('and the current values is ', change.value.toJS());
-            }
+            if (event.keyCode === 13) {
+                return change.splitBlock().setBlocks({ data: {} });
+              }
+              return undefined;
         }
     }
 };
