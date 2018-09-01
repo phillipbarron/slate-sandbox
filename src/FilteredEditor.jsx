@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {Editor} from 'slate-react';
 import {Value} from 'slate';
-import {FilterData} from './plugins/slate-data-filter';
-import {SimpleFilter} from './plugins/simple-filter';
+import {FilterData} from './plugins/filter-data';
 
 const initialValue = Value.fromJSON({
     document: {
@@ -27,10 +26,8 @@ const initialValue = Value.fromJSON({
         ]
     }
 });
-const plugins = [
-    SimpleFilter()
-  ]
-  
+
+const plugins = [FilterData()]
 
 class FilteredEditor extends Component {
     state = {
@@ -41,11 +38,7 @@ class FilteredEditor extends Component {
         this.setState({value})
     }
     render() {
-        return <Editor
-            value={this.state.value}
-            onChange={this.onChange}
-            plugins={plugins}
-        />
+        return <Editor value={this.state.value} onChange={this.onChange} plugins={plugins}/>
     }
 }
 
