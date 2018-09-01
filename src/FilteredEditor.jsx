@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Editor} from 'slate-react';
 import {Value} from 'slate';
 import {FilterData} from './plugins/slate-data-filter';
+import {SimpleFilter} from './plugins/simple-filter';
 
 const initialValue = Value.fromJSON({
     document: {
@@ -27,7 +28,7 @@ const initialValue = Value.fromJSON({
     }
 });
 const plugins = [
-    FilterData()
+    SimpleFilter()
   ]
   
 
