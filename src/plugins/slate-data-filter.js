@@ -1,6 +1,6 @@
 /** 
  * Slate's current behaviour is to copy the data from from parent nodes.
- * this will filter that out though what we actually want to do is override that bahaviour 
+ * this will filter that out though what we actually want to do is override that behaviour 
  * as this 'solution' is neither clean nor performant
 */
 export function FilterData() {
