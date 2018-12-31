@@ -9,3 +9,4 @@ the is a create-react-app sandbox for testing slate-js plugins
 This stripping of data on enter is only effective for hitting enter. Users may also edit by copying & pasting which would retain existing data properties. Ensuring that these data are removed would need to be handled separately for those events.
 
 
+todo - update to latest version of slate
